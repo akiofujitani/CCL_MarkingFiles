@@ -1,0 +1,35 @@
+{
+    "ccl_path": "./",
+    "ccl_extension": "ccl",
+    "hpf_path": "./",
+    "hpf_extension": "hpf",
+    "sheets_id": "",
+    "sheets_name": "",
+    "sheets_pos": "",
+    "list_geometry": {
+        "main": [
+            "600",
+            "400",
+            "1153",
+            "339"
+        ],
+        "settings": [
+            "",
+            "",
+            0,
+            0
+        ],
+        "edit": [
+            "",
+            "",
+            0,
+            0
+        ],
+        "about": [
+            "",
+            "",
+            0,
+            0
+        ]
+    }
+}
