@@ -39,7 +39,7 @@ configuration_template = '''
 
 class MainApp(tkinter.Tk):
     def __init__(self, title: str, log_queue: Queue, main_thread : Thread, config: ConfigurationValues, *args, **kwargs) -> None:
-        tkinter.Tk.__init__(self, *args, **kwargs)
+        super().__init__(self, *args, **kwargs)
         self.title(title)
         self.config_values = config
         self.log_queue = log_queue

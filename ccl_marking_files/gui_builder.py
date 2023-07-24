@@ -31,7 +31,7 @@ class ListView(tkinter.Toplevel):
     ignore: str    
     '''
     def __init__(self, master_win: tkinter.Tk, path_detail: PathDetails, config: ConfigurationValues, min_size: tuple, *args, **kwargs):
-        tkinter.Toplevel.__init__(self, *args, **kwargs)
+        super().__init__(self, *args, **kwargs)
         self.config_values = config
         self.last_grab = self.grab_current()
         self.grab_set()
@@ -171,7 +171,7 @@ class Config_Window(tkinter.Toplevel):
                 min_size: tuple,
                 config_path: str,
                 *args, **kwargs) -> None:
-        tkinter.Toplevel.__init__(self, *args, **kwargs)
+        super().__init__(self, *args, **kwargs)
         self.last_grab = self.grab_current()
         self.grab_set()
         self.config_values = config
@@ -357,7 +357,7 @@ class Edit_Values(tkinter.Toplevel):
                     focus_force=None, 
                     drop_down_list=None,
                     *args, **kwargs) -> None:
-        tkinter.Toplevel.__init__(self, *args, **kwargs)
+        super().__init__(self, *args, **kwargs)
         self.config_values = config
         self.last_grab = self.grab_current()
         self.grab_set()
@@ -510,7 +510,7 @@ class About(tkinter.Toplevel):
 
         Meant to store development information
         '''
-        tkinter.Toplevel.__init__(self, *args, **kwargs)
+        super().__init__(self, *args, **kwargs)
         self.last_grab = self.grab_current()
         self.grab_set()
         self.geometry('450x400')
