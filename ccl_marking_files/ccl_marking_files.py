@@ -55,7 +55,7 @@ Main_app
     |______GUI
             |_____ Treeview > List of all marking files
             |                       |
-            |                       |____ Load from sheets, ccl directory or csv             
+            |                       |____ Load from sheets, ccl files in directory or csv             
             |
             |______________CCL Vizualizer
                                 |
@@ -79,7 +79,7 @@ Main_app
 
 class MainApp(tkinter.Tk):
     def __init__(self, title: str, log_queue: Queue, config: ConfigurationValues, *args, **kwargs) -> None:
-        super().__init__(self, *args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.title(title)
         self.configuration_values = config
         self.log_queue = log_queue
@@ -118,6 +118,7 @@ class MainApp(tkinter.Tk):
         menu_bar.add_cascade(label='Help   ', menu=help_menu)
         self.config(menu=menu_bar)
 
+        # 
 
     def __load(self):
         logger.debug('Load pressed')
